@@ -4,36 +4,49 @@ from geo_helper import PLoc, EulerPole, R
 
 # get cartesian vector for PLoc
 # returns [x, y, z] (unit vector normal to p)
-def getRVector(p):
+def getVectFromPloc(p):
   return np.array([
       np.cos(p.phi) * np.cos(p.lam),
       np.cos(p.phi) * np.sin(p.lam),
       np.sin(p.phi)
   ])
 
-def getPFromRVector(r):
+def getPlocFromVector(r):
   lamb = np.arctan2(r[1], r[0])
   phi = np.arcsin(r[2])
   return PLoc(np.degrees(lamb), np.degrees(phi))
 
 # get omega vector from pole (normalized - unscaled by pole omega)
 def getWVector(pole):
-  return getRVector(pole.ploc())
+  return getVectFromPloc(pole.ploc())
+
+ 
+# unit vectors for 'easterly' and 'northerly' at P
+def e_hat(pLoc):
+  return np.array([-np.sin(pLoc.lam), np.cos(pLoc.lam), 0.0])
+def n_hat(pLoc):
+  return np.array([-np.sin(pLoc.phi) * np.cos(pLoc.lam), -
+                   np.sin(pLoc.phi) * np.sin(pLoc.lam), np.cos(pLoc.phi)])
+
+def getPlocFromLocNormal(p_hat):
+  phi = np.arcsin(p_hat[2])
+  lam = np.arctan2(p_hat[1], p_hat[0])
+  return PLoc(np.degrees(lam), np.degrees(phi))
 
 # Rotates point ploc around Euler pole by omega * ma to a new ploc2 
 def getPoleRotationOfPoint(pole, ploc, ma):
 
   # Apply Rodrigues' rotation formula
   theta = np.radians(pole.omega) * ma
-  v = getRVector(ploc)  # v
-  k = getWVector(pole)  # k
-  k_cross_v = np.cross(k, v)
-  k_dot_v = np.dot(k, v)
-  v_new = v * np.cos(theta) + k_cross_v * np.sin(theta) + \
-      k * k_dot_v * (1 - np.cos(theta))
+  R = getVectFromPloc(ploc)  
+  W = getVectFromPloc(pole.ploc()) 
+  W_cross_R = np.cross(W, R)
+  W_dot_R = np.dot(W, R)
+  V_new = R * np.cos(theta) + W_cross_R * np.sin(theta) + \
+      W * W_dot_R * (1 - np.cos(theta))
 
   # Convert the rotated Cartesian vector back to lat/long
-  return getPFromRVector(v_new)
+  return getPlocFromVector(V_new)
 
 # Combo pole emulation (R-V ordering)
 def getCompoundRotationTranslationOfPoint(vPole, rPole, ploc, ma):
@@ -63,60 +76,35 @@ def getPlocFromPoleData(naPAvel, pnwRotPole, pnwVPavel, ploc, ma):
       pnwVPole, pnwRotPole, loc_2, ma)
   return loc_3
 
-def getPlocFromLocNormal(p_hat):
-  phi = np.arcsin(p_hat[2])
-  lam = np.arctan2(p_hat[1], p_hat[0])
-  return PLoc(np.degrees(lam), np.degrees(phi))
-
 # Big circle pole for given loc and velocity vector. pAvel is azimuth and speed (e.f. km/ma or mm/yr)
 # cartesian Ve and Vn for point, and motion azimuth and magnitude (mm/Y)
 def getVeVnFromAzvel(pLoc, pAzvel):
-  # unit vectors for 'easterly' and 'northerly' at P
-  e_hat = np.array([-np.sin(pLoc.lam), np.cos(pLoc.lam), 0.0])
-  n_hat = np.array([-np.sin(pLoc.phi) * np.cos(pLoc.lam), -
-                   np.sin(pLoc.phi) * np.sin(pLoc.lam), np.cos(pLoc.phi)])
   # 2D motion vector at point
   V = np.array([np.sin(np.radians(pAzvel.azimuth)) * pAzvel.vel,
                 np.cos(np.radians(pAzvel.azimuth)) * pAzvel.vel])
   # return scaled velocity in easterly and northerly directions
-  return e_hat * V[0], n_hat * V[1]
+  return e_hat(pLoc) * V[0], n_hat(pLoc) * V[1]
 
+# Get pole defined by a great-circle motion at plic and with velocity and direction of pAvel
+# Used for defining the v-pole of the coupled pole model
 def getEulerPoleFromPlocAndPavel(ploc, pAvel):
   MetersPerDegree = 2 * np.pi * R / 360.0
   KmPerMaToDegreesPerMa = 1.0 / MetersPerDegree
   degreesPerMa = pAvel.vel * KmPerMaToDegreesPerMa
   omega = degreesPerMa
 
-  P = getRVector(ploc)
+  P = getVectFromPloc(ploc)
   V_e, V_n = getVeVnFromAzvel(ploc, pAvel)
   V = V_e + V_n
   pe_hat = gh.normalize(np.cross(P, V))  # epipolar unit direction vector
   epiPoleLoc = getPlocFromLocNormal(pe_hat)
   return EulerPole(epiPoleLoc.long, epiPoleLoc.lat, omega)
 
-def testIfBigCircleCoplanarity(ploc1, ploc2, ploc3):  # (r1 x r2) dot r3 == 0
-  r1 = getRVector(ploc1)
-  r2 = getRVector(ploc2)
-  r3 = getRVector(ploc3)
-
-  test = np.linalg.cross(r1, r2).dot(r3)
-  return test
-
-def project_V_to_v(V, p):  # V is 3D cartesion velocity, p is PLoc
-  e_hat = np.array([-np.sin(p.lam), np.cos(p.lam), 0])
-  n_hat = np.array([-np.sin(p.phi) * np.cos(p.lam), -
-                   np.sin(p.phi) * np.sin(p.lam), np.cos(p.phi)])
-  v_e = np.dot(V, e_hat)
-  v_n = np.dot(V, n_hat)
-  return np.array([v_e, v_n])
-
-# BUG? - not clear why the sign is flipped on V (see test_v_pole_from_sample_point)
-
-# pole is EulerPole, p is ploc, omega in degrees
-def calculate_v_from_EulerPole(pole, p, omega=None):
-  P = R * getRVector(p)
+def getVForPlocFromPole(pole, pLoc, omega=None):
+  P = R * getVectFromPloc(pLoc)
   O = np.radians(pole.omega if omega is None else omega) * \
-      getRVector(pole.ploc())
-  V = np.cross(P, O)
-  v = project_V_to_v(V, p)
-  return -v
+      getVectFromPloc(pole.ploc())
+  V = np.cross(O, P)
+  v_e = np.dot(V, e_hat(pLoc))
+  v_n = np.dot(V, n_hat(pLoc))
+  return np.array([v_e, v_n])

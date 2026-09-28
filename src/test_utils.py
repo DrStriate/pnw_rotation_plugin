@@ -84,7 +84,7 @@ def create_random_sample_ring(euler_pole,
   for i in range(len(rands)):
     sample = gh.create_sample(
         sample_ploc.long, sample_ploc.lat, 360.0 * rands[i][0], max_dist * rands[i][1])
-    v = ek.calculate_v_from_EulerPole(
+    v = ek.getVForPlocFromPole(
         euler_pole, sample, test_omega) + v_noise[i]
 
     if sample.long < crop_long:
@@ -129,9 +129,9 @@ def create_random_sample_dual_pole_ring(euler_pole1,
   for i in range(len(rands)):
     sample = gh.create_sample(
         ring_center.long, ring_center.lat, 360.0 * rands[i][0], max_dist * rands[i][1])
-    v1 = ek.calculate_v_from_EulerPole(
+    v1 = ek.getVForPlocFromPole(
         euler_pole1.normalize(), sample) + v_noise1[i]
-    v2 = ek.calculate_v_from_EulerPole(
+    v2 = ek.getVForPlocFromPole(
         euler_pole2.normalize(), sample) + v_noise2[i]
 
     if sample.long < crop_long:

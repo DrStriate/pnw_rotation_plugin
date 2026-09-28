@@ -88,7 +88,7 @@ def test_v_pole_from_sample_point():
   pnwVPole = ek.getEulerPoleFromPlocAndPavel(rotPole.ploc(), v_pavel)
 
   sample_ploc = rotPole.ploc()
-  v_out = ek.calculate_v_from_EulerPole(pnwVPole, sample_ploc)
+  v_out = ek.getVForPlocFromPole(pnwVPole, sample_ploc)
   assert v_out[0] == pytest.approx(v_in[0])
   assert v_out[1] == pytest.approx(v_in[1])
 
@@ -378,8 +378,8 @@ def test_compound_pole_v():
   loc_match = gh.create_sample(
       sample_center.long, sample_center.lat, inVPavel.azimuth + 90.0, distance_to_match)
 
-  v1 = ek.calculate_v_from_EulerPole(vPole.normalize(), loc_match)
-  v2 = ek.calculate_v_from_EulerPole(rotPole.normalize(), loc_match)
+  v1 = ek.getVForPlocFromPole(vPole.normalize(), loc_match)
+  v2 = ek.getVForPlocFromPole(rotPole.normalize(), loc_match)
 
   assert v1 == pytest.approx(-v2, abs=0.002)
 
