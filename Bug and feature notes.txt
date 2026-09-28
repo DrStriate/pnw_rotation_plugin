@@ -1,0 +1,18 @@
+Bugs
+- Add back velocity vector to GPS Vectors and Poles demo
+- It appears that the pole-finding code of the "Set Pnw GPS Poles" button don't match the new "GPS Pole" button. This needs investigation to find the bug that causes the difference and then the two need to be unified. The "Set..." button needs to purely a two-step demo (and renamed) while the "GPS Pole" button need to simply set the poles in the UI. (FIXED - Also added a unit test for a full run)
+- 8/9/26: The R-V and V-R plots of OC-NA Pole have an Pazvel setting of Az=0 yet the longitude changes materially (west of north) on the path. Az=0 should mean travelling along the long big circle (north) 
+
+Further validation needed
+- Odd translation moves: In running the "Brocher-Wells 2017 Jdf sample path.pb" setup in V-R mode for 5 10ma steps, the rot poles move down vertically (in keeping with the 0 degree azimuth for V) but the last move up step they splay out as they move north (the western most leg changes longitude by at least 0.4 degrees). Since (at least intuitively) this last step is primarily to restore the vertical drop of the rotation pole, it seems the 0 degrees azimuth last move should be vertical too? (On the other hand, the final YHS locations match on all configurations) (Same as above bug?)
+
+Feature changes needed
+- We have a demo of coming up with an Euler pole pair for the PNW GPS velocity data. What we need is a reverse demo of both the combined R-V field (for random points) and the R-only view 
+- Test: we need a solid (ideal geoid) simple quad test pair for pure rotation and rotation with v offset. May want to build the v-offset by building the big circle Euler pole and using rot Euler pole too. On the latter point bith test_utils create_sample_quad and its depency euler_kinematics calculate_v_from_azDist are probably bogus. Refactor/remove latter (8-9-26)
+- Validate: Once we have the right pure rotation and rot-offset ideal quad test setup, we should to 1) valdate our current decomposed rot-offset model and some of the code gemini generated yesterday to confirm we can move on from the consolidated (and other) model attempts. I'm leaving a lot of commented stuff in the euler and gauss regression (AND 'pole-test2.py') code to preserve some of those attempts (8-9-26)
+
+Cleanup:
+- 8/9/26: Remove now completely refactored test_pass_runs.py. Its about to be nothing but a maintenance burden
+
+Research
+- Need to validate the current combo pole - which is actually a small-increment t R and V step model - can be equivalently (and possibly preferentially) done with a single Euler pole derived from both R and V. For GPoles we envisioned a Rot pole center moved by a V pole as the model for combining them and getting the rot field to move with V, but the Combo model derives the V pole from the R Pole (and leaved the R pole in place) while tying the evolution 

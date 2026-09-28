@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/pnw_rotation_py" >
+        <file>icon.png</file>
+    </qresource>
+</RCC>
