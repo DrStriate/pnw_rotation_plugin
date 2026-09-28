@@ -1,0 +1,872 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -110.67,
+                    44.43000000000001
+                ]
+            },
+            "properties": {
+                "Time_Ma": 0.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 90.0,
+                "Euler_Lon": 0.0,
+                "Euler_Ang": 0.0
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -110.93636175876678,
+                    44.407961956775814
+                ]
+            },
+            "properties": {
+                "Time_Ma": 1.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 37.95225687118948,
+                "Euler_Lon": 77.51976767409742,
+                "Euler_Ang": 0.19307752376399773
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -111.20257783850121,
+                    44.38584190391355
+                ]
+            },
+            "properties": {
+                "Time_Ma": 2.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 37.93556716012228,
+                "Euler_Lon": 77.40032945717846,
+                "Euler_Ang": 0.38615450933750056
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -111.46864777184744,
+                    44.363639977554385
+                ]
+            },
+            "properties": {
+                "Time_Ma": 3.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 37.91884475938339,
+                "Euler_Lon": 77.2809254105787,
+                "Euler_Ang": 0.5792304185573975
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -111.73457109502543,
+                    44.34135631712617
+                ]
+            },
+            "properties": {
+                "Time_Ma": 4.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 37.90208972880965,
+                "Euler_Lon": 77.1615554015664,
+                "Euler_Ang": 0.7723047132360642
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -112.00034734785801,
+                    44.318991065331836
+                ]
+            },
+            "properties": {
+                "Time_Ma": 5.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 37.88530212816331,
+                "Euler_Lon": 77.04221929721677,
+                "Euler_Ang": 0.9653768551985624
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -112.26597607379782,
+                    44.29654436813795
+                ]
+            },
+            "properties": {
+                "Time_Ma": 6.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 37.868482017132244,
+                "Euler_Lon": 76.92291696441406,
+                "Euler_Ang": 1.1584463062596884
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -112.53145681995376,
+                    44.27401637476333
+                ]
+            },
+            "properties": {
+                "Time_Ma": 7.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 37.85162945533069,
+                "Euler_Lon": 76.8036482698534,
+                "Euler_Ang": 1.351512528218278
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -112.79678913711713,
+                    44.251407237666385
+                ]
+            },
+            "properties": {
+                "Time_Ma": 8.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 37.83474450229973,
+                "Euler_Lon": 76.68441308004304,
+                "Euler_Ang": 1.544574982891426
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -113.06197257978745,
+                    44.22871711253405
+                ]
+            },
+            "properties": {
+                "Time_Ma": 9.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 37.817827217507904,
+                "Euler_Lon": 76.56521126130616,
+                "Euler_Ang": 1.7376331320678033
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -113.32700670619788,
+                    44.20594615826878
+                ]
+            },
+            "properties": {
+                "Time_Ma": 10.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 37.80087766035171,
+                "Euler_Lon": 76.44604267978293,
+                "Euler_Ang": 1.9306864375416617
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -113.58132230898224,
+                    44.137412260325355
+                ]
+            },
+            "properties": {
+                "Time_Ma": 11.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 37.69606772361106,
+                "Euler_Lon": 77.9048140069043,
+                "Euler_Ang": 2.1227152162765575
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -113.87032498300516,
+                    44.072758308173675
+                ]
+            },
+            "properties": {
+                "Time_Ma": 12.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 38.026033998632506,
+                "Euler_Lon": 78.91382826337079,
+                "Euler_Ang": 2.3377373946326454
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -114.15894259843438,
+                    44.00800818778933
+                ]
+            },
+            "properties": {
+                "Time_Ma": 13.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 38.28786685406449,
+                "Euler_Lon": 79.73837873104686,
+                "Euler_Ang": 2.553304955297799
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -114.44717515538717,
+                    43.94316260655462
+                ]
+            },
+            "properties": {
+                "Time_Ma": 14.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 38.49908932396388,
+                "Euler_Lon": 80.41936231842851,
+                "Euler_Ang": 2.7692880043848134
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -114.73502266293286,
+                    43.87822227640521
+                ]
+            },
+            "properties": {
+                "Time_Ma": 15.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 38.671783620188535,
+                "Euler_Lon": 80.98652661668469,
+                "Euler_Ang": 2.9855938077031445
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -115.02248513906977,
+                    43.813187913792504
+                ]
+            },
+            "properties": {
+                "Time_Ma": 16.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 38.814524573120856,
+                "Euler_Lon": 81.4619963902267,
+                "Euler_Ang": 3.202154371097217
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -115.30956261070176,
+                    43.74806023964571
+                ]
+            },
+            "properties": {
+                "Time_Ma": 17.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 38.933551487988495,
+                "Euler_Lon": 81.8625512795293,
+                "Euler_Ang": 3.418918674175635
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -115.59625511361395,
+                    43.6828399793339
+                ]
+            },
+            "properties": {
+                "Time_Ma": 18.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 39.03350396443496,
+                "Euler_Lon": 82.20113818064463,
+                "Euler_Ang": 3.6358476486815614
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -115.88256269244785,
+                    43.617527862627824
+                ]
+            },
+            "properties": {
+                "Time_Ma": 19.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 39.11789845400296,
+                "Euler_Lon": 82.48790054930828,
+                "Euler_Ang": 3.852910835663689
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -116.16848540067599,
+                    43.55212462366198
+                ]
+            },
+            "properties": {
+                "Time_Ma": 20.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 39.18944544524056,
+                "Euler_Lon": 82.73089457624975,
+                "Euler_Ang": 4.070084102681096
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -116.46130736541589,
+                    43.51785715707568
+                ]
+            },
+            "properties": {
+                "Time_Ma": 21.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 39.81915900103745,
+                "Euler_Lon": 82.53076791070714,
+                "Euler_Ang": 4.281157418852827
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -116.75625413787108,
+                    43.49143418961114
+                ]
+            },
+            "properties": {
+                "Time_Ma": 22.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 40.42287321642115,
+                "Euler_Lon": 82.20686319994375,
+                "Euler_Ang": 4.492252924038877
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -117.05113824108896,
+                    43.46492394390759
+                ]
+            },
+            "properties": {
+                "Time_Ma": 23.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 40.9666852228748,
+                "Euler_Lon": 81.89589103752168,
+                "Euler_Ang": 4.703900021019894
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -117.3459572899227,
+                    43.4383251554211
+                ]
+            },
+            "properties": {
+                "Time_Ma": 24.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 41.45822325174195,
+                "Euler_Lon": 81.5965352555774,
+                "Euler_Ang": 4.916024396294655
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -117.64070889874681,
+                    43.4116365747284
+                ]
+            },
+            "properties": {
+                "Time_Ma": 25.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 41.90389248686562,
+                "Euler_Lon": 81.30765488224623,
+                "Euler_Ang": 5.12856375942711
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -117.93539068164226,
+                    43.384856967610226
+                ]
+            },
+            "properties": {
+                "Time_Ma": 26.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 42.30910704088418,
+                "Euler_Lon": 81.02825594879958,
+                "Euler_Ang": 5.3414655084604306
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.23000025258268,
+                    43.35798511513355
+                ]
+            },
+            "properties": {
+                "Time_Ma": 27.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 42.67847186633964,
+                "Euler_Lon": 80.75746856318563,
+                "Euler_Ang": 5.554684913655077
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.524535225622,
+                    43.33101981373147
+                ]
+            },
+            "properties": {
+                "Time_Ma": 28.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 43.015926571415406,
+                "Euler_Lon": 80.49452813855784,
+                "Euler_Ang": 5.768183691387361
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.81899321508361,
+                    43.30395987528211
+                ]
+            },
+            "properties": {
+                "Time_Ma": 29.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 43.32486000208871,
+                "Euler_Lon": 80.23875992522102,
+                "Euler_Ang": 5.981928874661305
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -119.11337183575053,
+                    43.27680412718515
+                ]
+            },
+            "properties": {
+                "Time_Ma": 30.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 43.60820220730307,
+                "Euler_Lon": 79.98956618795597,
+                "Euler_Ang": 6.195891911263357
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -119.28862654631462,
+                    43.200973789816246
+                ]
+            },
+            "properties": {
+                "Time_Ma": 31.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 44.31658745682297,
+                "Euler_Lon": 80.73507750937486,
+                "Euler_Ang": 6.336489822874906
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -119.46414097908131,
+                    43.12508539443843
+                ]
+            },
+            "properties": {
+                "Time_Ma": 32.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 44.984636233297365,
+                "Euler_Lon": 81.46210571532586,
+                "Euler_Ang": 6.478919471556554
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -119.63991093384695,
+                    43.049139124925276
+                ]
+            },
+            "properties": {
+                "Time_Ma": 33.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 45.61469526747598,
+                "Euler_Lon": 82.17066787385062,
+                "Euler_Ang": 6.6230605802158555
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -119.86424371726726,
+                    43.00787726585857
+                ]
+            },
+            "properties": {
+                "Time_Ma": 34.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 46.7507743343845,
+                "Euler_Lon": 82.50139988015984,
+                "Euler_Ang": 6.7953637542583785
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -120.09449988225113,
+                    42.97039348806119
+                ]
+            },
+            "properties": {
+                "Time_Ma": 35.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 47.882380299736255,
+                "Euler_Lon": 82.78619813713924,
+                "Euler_Ang": 6.973900897275434
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -120.32532334617012,
+                    42.93282570261905
+                ]
+            },
+            "properties": {
+                "Time_Ma": 36.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 48.951489873397435,
+                "Euler_Lon": 83.06552819407887,
+                "Euler_Ang": 7.155564658288376
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -120.55670972879133,
+                    42.895173309765255
+                ]
+            },
+            "properties": {
+                "Time_Ma": 37.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 49.96180981482843,
+                "Euler_Lon": 83.33927309603568,
+                "Euler_Ang": 7.340120328897079
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -120.78865464026738,
+                    42.8574356937362
+                ]
+            },
+            "properties": {
+                "Time_Ma": 38.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 50.91686960315112,
+                "Euler_Lon": 83.6073251780251,
+                "Euler_Ang": 7.527352597266554
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.0211536812909,
+                    42.81961222307278
+                ]
+            },
+            "properties": {
+                "Time_Ma": 39.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 51.82001439145204,
+                "Euler_Lon": 83.86958599293364,
+                "Euler_Ang": 7.717064008334644
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.25420244324835,
+                    42.78170225092298
+                ]
+            },
+            "properties": {
+                "Time_Ma": 40.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 52.67440281775378,
+                "Euler_Lon": 84.12596621172264,
+                "Euler_Ang": 7.909073496041183
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.75732697034894,
+                    42.70950311373886
+                ]
+            },
+            "properties": {
+                "Time_Ma": 41.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 52.80983944459168,
+                "Euler_Lon": 83.85100540181759,
+                "Euler_Ang": 8.28997738840234
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.25817901879789,
+                    42.631103621490915
+                ]
+            },
+            "properties": {
+                "Time_Ma": 42.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 52.92292343067722,
+                "Euler_Lon": 83.64541306577145,
+                "Euler_Ang": 8.671259665218141
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.75847066096044,
+                    42.55216053971321
+                ]
+            },
+            "properties": {
+                "Time_Ma": 43.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 53.0222833430166,
+                "Euler_Lon": 83.44044936506187,
+                "Euler_Ang": 9.052564287199232
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -123.25819521687939,
+                    42.47267106684795
+                ]
+            },
+            "properties": {
+                "Time_Ma": 44.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 53.10956048555376,
+                "Euler_Lon": 83.23608410141624,
+                "Euler_Ang": 9.43388197052705
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -123.75734600850672,
+                    42.39263245781127
+                ]
+            },
+            "properties": {
+                "Time_Ma": 45.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 53.186141529276455,
+                "Euler_Lon": 83.03229124453334,
+                "Euler_Ang": 9.815204607129006
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -124.25591636129319,
+                    42.312042024424386
+                ]
+            },
+            "properties": {
+                "Time_Ma": 46.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 53.253206020695785,
+                "Euler_Lon": 82.829048207138,
+                "Euler_Ang": 10.196525044836651
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -124.7538996057718,
+                    42.23089713582988
+                ]
+            },
+            "properties": {
+                "Time_Ma": 47.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 53.311763644647314,
+                "Euler_Lon": 82.62633526601195,
+                "Euler_Ang": 10.57783691502528
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -125.24499087876026,
+                    42.12337432968027
+                ]
+            },
+            "properties": {
+                "Time_Ma": 48.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 53.309634307505384,
+                "Euler_Lon": 82.63719305371751,
+                "Euler_Ang": 10.961427228503293
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -125.67753252326202,
+                    41.78296354798239
+                ]
+            },
+            "properties": {
+                "Time_Ma": 49.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 52.82950507146471,
+                "Euler_Lon": 84.46123873797912,
+                "Euler_Ang": 11.368753547771618
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -126.10721763598973,
+                    41.442113531616734
+                ]
+            },
+            "properties": {
+                "Time_Ma": 50.0,
+                "Model": "Seton et al. (2012)",
+                "Euler_Lat": 52.357198323493414,
+                "Euler_Lon": 86.11038420168877,
+                "Euler_Ang": 11.78131878807648
+            }
+        }
+    ]
+}

@@ -1,0 +1,137 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -110.67,
+                    44.43000000000001
+                ]
+            },
+            "properties": {
+                "Time_Ma": 0.0,
+                "Model": "Matthews et al. (2016)",
+                "Finite_Pole_Lat": 90.0,
+                "Finite_Pole_Lon": 0.0,
+                "Finite_Angle_Deg": 0.0,
+                "Instant_Pole_Lat": 39.18096084504573,
+                "Instant_Pole_Lon": 142.27798510357698,
+                "Omega_Deg_Myr": -0.22860992272798564,
+                "Local_Speed_mm_yr": 24.40387471671854,
+                "Local_Azimuth_Deg": 39.46085961283933
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -112.61519893031993,
+                    42.73504897191983
+                ]
+            },
+            "properties": {
+                "Time_Ma": 10.0,
+                "Model": "Matthews et al. (2016)",
+                "Finite_Pole_Lat": 38.999214793477655,
+                "Finite_Pole_Lon": 140.92646085242455,
+                "Finite_Angle_Deg": 2.285965027840291,
+                "Instant_Pole_Lat": 38.78310667713002,
+                "Instant_Pole_Lon": 139.58712787083883,
+                "Omega_Deg_Myr": -0.22860992591651497,
+                "Local_Speed_mm_yr": 24.610141032591226,
+                "Local_Azimuth_Deg": 39.98723640365159
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -114.93065173671528,
+                    41.163908212622225
+                ]
+            },
+            "properties": {
+                "Time_Ma": 20.0,
+                "Model": "Matthews et al. (2016)",
+                "Finite_Pole_Lat": 42.65486837510821,
+                "Finite_Pole_Lon": 137.74825974991626,
+                "Finite_Angle_Deg": 4.710011208306499,
+                "Instant_Pole_Lat": 46.01734102642778,
+                "Instant_Pole_Lon": 132.42619780570945,
+                "Omega_Deg_Myr": -0.24565624170780462,
+                "Local_Speed_mm_yr": 26.228523695843375,
+                "Local_Azimuth_Deg": 48.26301017061917
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -117.43268432420511,
+                    40.28992850538867
+                ]
+            },
+            "properties": {
+                "Time_Ma": 30.0,
+                "Model": "Matthews et al. (2016)",
+                "Finite_Pole_Lat": 48.54085782703712,
+                "Finite_Pole_Lon": 132.38752759560012,
+                "Finite_Angle_Deg": 6.822774854299734,
+                "Instant_Pole_Lat": 58.68746070350312,
+                "Instant_Pole_Lon": 112.32443119896563,
+                "Omega_Deg_Myr": -0.22213571756324305,
+                "Local_Speed_mm_yr": 23.345649200364903,
+                "Local_Azimuth_Deg": 65.53170079963638
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -120.36654000281526,
+                    39.76539084120136
+                ]
+            },
+            "properties": {
+                "Time_Ma": 40.0,
+                "Model": "Matthews et al. (2016)",
+                "Finite_Pole_Lat": 55.34058324297791,
+                "Finite_Pole_Lon": 127.68362187800308,
+                "Finite_Angle_Deg": 9.192983628493632,
+                "Instant_Pole_Lat": 72.946704996006,
+                "Instant_Pole_Lon": 89.26795781018028,
+                "Omega_Deg_Myr": -0.27612061233667246,
+                "Local_Speed_mm_yr": 27.061477610060884,
+                "Local_Azimuth_Deg": 80.30505202208201
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.71977668519148,
+                    39.01921142443216
+                ]
+            },
+            "properties": {
+                "Time_Ma": 50.0,
+                "Model": "Matthews et al. (2016)",
+                "Finite_Pole_Lat": 59.19038630963033,
+                "Finite_Pole_Lon": 129.58578204134247,
+                "Finite_Angle_Deg": 11.549613775293661,
+                "Instant_Pole_Lat": 36.22708819334449,
+                "Instant_Pole_Lon": 152.030574122597,
+                "Omega_Deg_Myr": -0.33836625559869643,
+                "Local_Speed_mm_yr": 35.376028176019034,
+                "Local_Azimuth_Deg": 28.49008890295204
+            }
+        }
+    ]
+}

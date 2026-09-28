@@ -1,0 +1,137 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -110.67,
+                    44.43000000000001
+                ]
+            },
+            "properties": {
+                "Time_Ma": 0.0,
+                "Model": "M\u00fcller et al. (2019)",
+                "Finite_Pole_Lat": 90.0,
+                "Finite_Pole_Lon": 0.0,
+                "Finite_Angle_Deg": 0.0,
+                "Instant_Pole_Lat": 8.442520800389799,
+                "Instant_Pole_Lon": 88.86629941640967,
+                "Omega_Deg_Myr": -0.19669357136111332,
+                "Local_Speed_mm_yr": 18.076830740421165,
+                "Local_Azimuth_Deg": 66.38829477099051
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -112.76010545049047,
+                    43.78052822511621
+                ]
+            },
+            "properties": {
+                "Time_Ma": 10.0,
+                "Model": "M\u00fcller et al. (2019)",
+                "Finite_Pole_Lat": -8.539372407288836,
+                "Finite_Pole_Lon": -92.39461112623053,
+                "Finite_Angle_Deg": -1.9846252385775323,
+                "Instant_Pole_Lat": -8.604301746007982,
+                "Instant_Pole_Lon": -93.64419832509495,
+                "Omega_Deg_Myr": 0.20026530198004794,
+                "Local_Speed_mm_yr": 18.290727352068565,
+                "Local_Azimuth_Deg": 66.78803700906491
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -114.45947444502052,
+                    43.039532645080115
+                ]
+            },
+            "properties": {
+                "Time_Ma": 20.0,
+                "Model": "M\u00fcller et al. (2019)",
+                "Finite_Pole_Lat": -19.33883945744172,
+                "Finite_Pole_Lon": -86.24482192436676,
+                "Finite_Angle_Deg": -3.3220398610517177,
+                "Instant_Pole_Lat": -34.50356095126232,
+                "Instant_Pole_Lon": -78.76629145061277,
+                "Omega_Deg_Myr": 0.14746124745737854,
+                "Local_Speed_mm_yr": 16.309650935699633,
+                "Local_Azimuth_Deg": 60.14477131231598
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -116.4731178864601,
+                    42.44120931814721
+                ]
+            },
+            "properties": {
+                "Time_Ma": 30.0,
+                "Model": "M\u00fcller et al. (2019)",
+                "Finite_Pole_Lat": -22.786369239689307,
+                "Finite_Pole_Lon": -87.7311516473247,
+                "Finite_Angle_Deg": -4.944370920122632,
+                "Instant_Pole_Lat": -28.980269923347784,
+                "Instant_Pole_Lon": -93.24547139149347,
+                "Omega_Deg_Myr": 0.16534827532459295,
+                "Local_Speed_mm_yr": 17.769061992898386,
+                "Local_Azimuth_Deg": 68.6250292142272
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -119.96932574400766,
+                    41.661790922590804
+                ]
+            },
+            "properties": {
+                "Time_Ma": 40.0,
+                "Model": "M\u00fcller et al. (2019)",
+                "Finite_Pole_Lat": -36.086580956255496,
+                "Finite_Pole_Lon": -87.72803734773234,
+                "Finite_Angle_Deg": -7.385387231482917,
+                "Instant_Pole_Lat": 62.755814324218676,
+                "Instant_Pole_Lon": 82.97361964039312,
+                "Omega_Deg_Myr": -0.29586874042817063,
+                "Local_Speed_mm_yr": 31.334736611505075,
+                "Local_Azimuth_Deg": 76.24786955676592
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.2262712087428,
+                    39.8631495732345
+                ]
+            },
+            "properties": {
+                "Time_Ma": 50.0,
+                "Model": "M\u00fcller et al. (2019)",
+                "Finite_Pole_Lat": -38.001567655062146,
+                "Finite_Pole_Lon": -79.87381465165683,
+                "Finite_Angle_Deg": -9.70990197963445,
+                "Instant_Pole_Lat": -20.60131065027046,
+                "Instant_Pole_Lon": -41.06405916194189,
+                "Omega_Deg_Myr": 0.40981899963514773,
+                "Local_Speed_mm_yr": 45.56571271840152,
+                "Local_Azimuth_Deg": 20.37776847777951
+            }
+        }
+    ]
+}

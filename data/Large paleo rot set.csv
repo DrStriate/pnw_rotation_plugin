@@ -1,0 +1,21 @@
+Unit,Sub-unit/Site,Age_Ma,Rotation_deg,Alpha95_deg,N,Lithology,Quality,Source
+Siletz River Volc.,flow group A,49,52,9,10,basalt,3,Chan et al.
+Siletz River Volc.,flow group B,48,47,11,8,basalt,3,Chan et al.
+Crescent Fm (WA),lower flows,47,55,8,12,basalt,3,Wells et al.
+Crescent Fm (WA),mid section,46,50,10,9,basalt,3,Wells et al.
+Tillamook Volc.,main section,45,48,12,7,basalt,3,Magill et al.
+Grays River,flows,44,46,10,8,basalt,3,Heller et al.
+Coast Range sediments,marine units,43,50,15,6,sediment,2,Simpson & Cox
+Crescent Fm (WA),upper flows,42,44,9,10,basalt,3,Wells et al.
+Siletz River Volc.,upper section,41,42,11,7,basalt,3,Chan et al.
+Coast Range basin,sediments,39,45,14,6,sediment,2,Prothero et al.
+Western OR,volcanic unit,36,40,10,8,basalt,3,Fleck et al.
+Coast Range,mixed units,34,38,13,6,mixed,2,Wells & Simpson
+Oregon Coast Range,flows,32,35,9,9,basalt,3,Wells et al.
+Coast Range sediments,basin fill,30,37,16,5,sediment,1,legacy
+Western OR,volcanic,28,33,11,7,basalt,3,Fleck et al.
+Coast Range,flows,25,30,10,8,basalt,3,Wells et al.
+Western OR,volcanic,20,25,9,9,basalt,3,Fleck et al.
+Boring Volcanic Field,early,15,22,8,10,basalt,3,Fleck et al.
+Boring Volcanic Field,late,10,18,7,12,basalt,3,Fleck et al.
+Boring Volcanic Field,youngest,5,12,6,11,basalt,3,Fleck et al.

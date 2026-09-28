@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# QGIS Plugin Stuff (optional, depending on project structure)
+help/
+scripts/
+test/
+.noseids
+pb_tool.cfg
+pylintrc
+resources_rc.py
+
+# IDE files (e.g., VS Code, PyCharm)
+#.vscode/
+.idea/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+na_plate_gplates/gplately.log
+na_plate_gplates/ptt.log
+

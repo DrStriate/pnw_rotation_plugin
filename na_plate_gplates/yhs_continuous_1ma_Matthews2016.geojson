@@ -1,0 +1,872 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -110.67,
+                    44.43000000000001
+                ]
+            },
+            "properties": {
+                "Time_Ma": 0.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 90.0,
+                "Euler_Lon": 0.0,
+                "Euler_Ang": 0.0
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -110.86525516218586,
+                    44.2605668500991
+                ]
+            },
+            "properties": {
+                "Time_Ma": 1.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 39.16492093162621,
+                "Euler_Lon": 142.1548737798235,
+                "Euler_Ang": 0.2286097897502522
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -111.06035069785642,
+                    44.09111930029797
+                ]
+            },
+            "properties": {
+                "Time_Ma": 2.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 39.14698533663312,
+                "Euler_Lon": 142.0181408499814,
+                "Euler_Ang": 0.4572187742379584
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -111.2552851803479,
+                    43.92165757981303
+                ]
+            },
+            "properties": {
+                "Time_Ma": 3.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 39.12893041549641,
+                "Euler_Lon": 141.88146843320135,
+                "Euler_Ang": 0.6858261482143183
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -111.45005719128005,
+                    43.752181922412696
+                ]
+            },
+            "properties": {
+                "Time_Ma": 4.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 39.11075628694271,
+                "Euler_Lon": 141.74485659075756,
+                "Euler_Ang": 0.914431106408601
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -111.64466532040201,
+                    43.58269256643527
+                ]
+            },
+            "properties": {
+                "Time_Ma": 5.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 39.09246306958059,
+                "Euler_Lon": 141.6083053825246,
+                "Euler_Ang": 1.1430328435581538
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -111.83910816544093,
+                    43.413189754807334
+                ]
+            },
+            "properties": {
+                "Time_Ma": 6.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 39.07405088189896,
+                "Euler_Lon": 141.4718148669796,
+                "Euler_Ang": 1.3716305543753837
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -112.03338433195393,
+                    43.24367373506195
+                ]
+            },
+            "properties": {
+                "Time_Ma": 7.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 39.055519842265355,
+                "Euler_Lon": 141.33538510120408,
+                "Euler_Ang": 1.6002234335466272
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -112.22749243318238,
+                    43.07414475935599
+                ]
+            },
+            "properties": {
+                "Time_Ma": 8.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 39.03687006892462,
+                "Euler_Lon": 141.19901614088644,
+                "Euler_Ang": 1.8288106757549345
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -112.42143108990945,
+                    42.90460308448888
+                ]
+            },
+            "properties": {
+                "Time_Ma": 9.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 39.01810167999719,
+                "Euler_Lon": 141.0627080403238,
+                "Euler_Ang": 2.0573914756443994
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -112.61519893031993,
+                    42.73504897191983
+                ]
+            },
+            "properties": {
+                "Time_Ma": 10.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 38.999214793477655,
+                "Euler_Lon": 140.92646085242455,
+                "Euler_Ang": 2.285965027840291
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -112.8165827342805,
+                    42.57454315913517
+                ]
+            },
+            "properties": {
+                "Time_Ma": 11.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 39.247271450026396,
+                "Euler_Lon": 140.7150994500848,
+                "Euler_Ang": 2.512799434407033
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -113.05239734626528,
+                    42.4180472703513
+                ]
+            },
+            "properties": {
+                "Time_Ma": 12.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 39.913646156710826,
+                "Euler_Lon": 140.27332854312374,
+                "Euler_Ang": 2.756039668498226
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -113.28798545055025,
+                    42.26149068917015
+                ]
+            },
+            "properties": {
+                "Time_Ma": 13.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 40.46721441551773,
+                "Euler_Lon": 139.87390036465635,
+                "Euler_Ang": 2.999639717212878
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -113.52334574753087,
+                    42.10487355993013
+                ]
+            },
+            "properties": {
+                "Time_Ma": 14.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 40.93335413257252,
+                "Euler_Lon": 139.50817259168718,
+                "Euler_Ang": 3.2435153383252984
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -113.75847694513236,
+                    41.94819603374009
+                ]
+            },
+            "properties": {
+                "Time_Ma": 15.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 41.3303840926923,
+                "Euler_Lon": 139.16970842213846,
+                "Euler_Ang": 3.4876055289001173
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -113.99337775872814,
+                    41.79145826849009
+                ]
+            },
+            "properties": {
+                "Time_Ma": 16.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 41.67185070171186,
+                "Euler_Lon": 138.85361564527037,
+                "Euler_Ang": 3.7318649738845955
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -114.22804691105905,
+                    41.634660428861686
+                ]
+            },
+            "properties": {
+                "Time_Ma": 17.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 41.96798252854836,
+                "Euler_Lon": 138.55610981251087,
+                "Euler_Ang": 3.9762592537379953
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -114.46248313215361,
+                    41.47780268633921
+                ]
+            },
+            "properties": {
+                "Time_Ma": 18.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 42.226644827330084,
+                "Euler_Lon": 138.27421764576803,
+                "Euler_Ang": 4.220761704603445
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -114.69668515924944,
+                    41.32088521921942
+                ]
+            },
+            "properties": {
+                "Time_Ma": 19.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 42.45398323150231,
+                "Euler_Lon": 138.00557085018505,
+                "Euler_Ang": 4.465351303420562
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -114.93065173671528,
+                    41.163908212622225
+                ]
+            },
+            "properties": {
+                "Time_Ma": 20.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 42.65486837510821,
+                "Euler_Lon": 137.74825974991626,
+                "Euler_Ang": 4.710011208306499
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -115.17882703164342,
+                    41.06965860213762
+                ]
+            },
+            "properties": {
+                "Time_Ma": 21.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 43.42363373091057,
+                "Euler_Lon": 137.16968260069714,
+                "Euler_Ang": 4.921004161535848
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -115.4290931627982,
+                    40.98327731357122
+                ]
+            },
+            "properties": {
+                "Time_Ma": 22.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 44.199531700339215,
+                "Euler_Lon": 136.57148173386815,
+                "Euler_Ang": 5.129059284874312
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -115.67941013531949,
+                    40.896834673456695
+                ]
+            },
+            "properties": {
+                "Time_Ma": 23.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 44.909739992957725,
+                "Euler_Lon": 135.99287622542596,
+                "Euler_Ang": 5.3381612801219545
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -115.92977354279611,
+                    40.81032959766183
+                ]
+            },
+            "properties": {
+                "Time_Ma": 24.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 45.561458122447526,
+                "Euler_Lon": 135.43244975150418,
+                "Euler_Ang": 5.548188013058927
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -116.18017899436879,
+                    40.72376101158621
+                ]
+            },
+            "properties": {
+                "Time_Ma": 25.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 46.16090920230757,
+                "Euler_Lon": 134.88892066782736,
+                "Euler_Ang": 5.759034542526154
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -116.4306221147444,
+                    40.63712785033835
+                ]
+            },
+            "properties": {
+                "Time_Ma": 26.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 46.713493133001684,
+                "Euler_Lon": 134.36112662701868,
+                "Euler_Ang": 5.970610251306899
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -116.68109854421236,
+                    40.5504290589115
+                ]
+            },
+            "properties": {
+                "Time_Ma": 27.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 47.223913220028855,
+                "Euler_Lon": 133.84801121965725,
+                "Euler_Ang": 6.182836518351502
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -116.93160393866309,
+                    40.46366359235681
+                ]
+            },
+            "properties": {
+                "Time_Ma": 28.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 47.696281120762414,
+                "Euler_Lon": 133.3486123410502,
+                "Euler_Ang": 6.395644820123353
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -117.18213396960863,
+                    40.37683041595543
+                ]
+            },
+            "properties": {
+                "Time_Ma": 29.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 48.13420410107797,
+                "Euler_Lon": 132.86205203375292,
+                "Euler_Ang": 6.608975173809017
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -117.43268432420511,
+                    40.28992850538867
+                ]
+            },
+            "properties": {
+                "Time_Ma": 30.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 48.54085782703712,
+                "Euler_Lon": 132.38752759560012,
+                "Euler_Ang": 6.822774854299734
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -117.68738787908985,
+                    40.211475921653374
+                ]
+            },
+            "properties": {
+                "Time_Ma": 31.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 48.99682010167377,
+                "Euler_Lon": 131.89349130067612,
+                "Euler_Ang": 7.035344819324528
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -117.94212788368606,
+                    40.13294269704758
+                ]
+            },
+            "properties": {
+                "Time_Ma": 32.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 49.42223155756352,
+                "Euler_Lon": 131.4102338311112,
+                "Euler_Ang": 7.248456622996483
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.19690024463402,
+                    40.05432769661765
+                ]
+            },
+            "properties": {
+                "Time_Ma": 33.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 49.819654941744325,
+                "Euler_Lon": 130.93718928295925,
+                "Euler_Ang": 7.462060329184638
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.5009445503815,
+                    40.009948469139026
+                ]
+            },
+            "properties": {
+                "Time_Ma": 34.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 50.7206035354586,
+                "Euler_Lon": 130.47266188621396,
+                "Euler_Ang": 7.701304887123929
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.81085964161912,
+                    39.96933100637464
+                ]
+            },
+            "properties": {
+                "Time_Ma": 35.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 51.61993764037758,
+                "Euler_Lon": 130.00811656427004,
+                "Euler_Ang": 7.945460047063743
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -119.12118862109473,
+                    39.92866081475136
+                ]
+            },
+            "properties": {
+                "Time_Ma": 36.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 52.46185390105352,
+                "Euler_Lon": 129.54330373487667,
+                "Euler_Ang": 8.191620221291629
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -119.43192632494937,
+                    39.88793480106744
+                ]
+            },
+            "properties": {
+                "Time_Ma": 37.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 53.25092461549866,
+                "Euler_Lon": 129.07833832615233,
+                "Euler_Ang": 8.43960531506791
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -119.74306757991633,
+                    39.84714986829587
+                ]
+            },
+            "properties": {
+                "Time_Ma": 38.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 53.99129171826377,
+                "Euler_Lon": 128.61333163361812,
+                "Euler_Ang": 8.689254450237701
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -120.05460720327572,
+                    39.80630291607534
+                ]
+            },
+            "properties": {
+                "Time_Ma": 39.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 54.68670943529037,
+                "Euler_Lon": 128.1483913977003,
+                "Euler_Ang": 8.940423615816858
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -120.36654000281526,
+                    39.76539084120136
+                ]
+            },
+            "properties": {
+                "Time_Ma": 40.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 55.34058324297791,
+                "Euler_Lon": 127.68362187800308,
+                "Euler_Ang": 9.192983628493632
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -120.6125617548878,
+                    39.75047413285955
+                ]
+            },
+            "properties": {
+                "Time_Ma": 41.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 56.13027028625353,
+                "Euler_Lon": 127.64161057757471,
+                "Euler_Ang": 9.404624146760247
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -120.85741402791649,
+                    39.7298015975055
+                ]
+            },
+            "properties": {
+                "Time_Ma": 42.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 56.85943803526942,
+                "Euler_Lon": 127.63415614989056,
+                "Euler_Ang": 9.62031253710773
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.10262030205512,
+                    39.709051576600075
+                ]
+            },
+            "properties": {
+                "Time_Ma": 43.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 57.5550448692499,
+                "Euler_Lon": 127.62207791709905,
+                "Euler_Ang": 9.837624313047
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.34817899929723,
+                    39.688223430040075
+                ]
+            },
+            "properties": {
+                "Time_Ma": 44.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 58.21904452126466,
+                "Euler_Lon": 127.60541151410054,
+                "Euler_Ang": 10.05645245939815
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.59408853353759,
+                    39.6673165111245
+                ]
+            },
+            "properties": {
+                "Time_Ma": 45.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 58.853262230590964,
+                "Euler_Lon": 127.58419360972756,
+                "Euler_Ang": 10.276698342533155
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -121.84034731060142,
+                    39.646330166640354
+                ]
+            },
+            "properties": {
+                "Time_Ma": 46.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 59.45940272565469,
+                "Euler_Lon": 127.5584618564632,
+                "Euler_Ang": 10.498270975088166
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.08695372827357,
+                    39.62526373694999
+                ]
+            },
+            "properties": {
+                "Time_Ma": 47.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 60.03905798450839,
+                "Euler_Lon": 127.52825484144246,
+                "Euler_Ang": 10.721086347364798
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.32875808090209,
+                    39.57828811706664
+                ]
+            },
+            "properties": {
+                "Time_Ma": 48.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 60.47266647729062,
+                "Euler_Lon": 127.60716393166824,
+                "Euler_Ang": 10.952234471687456
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.52432272657194,
+                    39.298782839542675
+                ]
+            },
+            "properties": {
+                "Time_Ma": 49.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 59.819424333872654,
+                "Euler_Lon": 128.6461985107634,
+                "Euler_Ang": 11.249755057110434
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -122.71977668519148,
+                    39.01921142443216
+                ]
+            },
+            "properties": {
+                "Time_Ma": 50.0,
+                "Model": "Matthews et al. (2016)",
+                "Euler_Lat": 59.19038630963033,
+                "Euler_Lon": 129.58578204134247,
+                "Euler_Ang": 11.549613775293661
+            }
+        }
+    ]
+}
