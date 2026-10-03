@@ -92,12 +92,12 @@ class PathLayer():
     self.qvector_layer.triggerRepaint()
 
   # plots path from start_point around Euler pole for specified time (ma)
-  def RenderPoleMotionForMa(self, start_point, pole, ma, N=20):
+  def RenderPoleMotionForMa(self, start_point, pole, ma, realWorld, N=20):
     layer_paths = []
     start_loc = start_point
     for i in range(0, N+1):
       next_ma = i * ma / N
-      next_loc = ek.getPoleRotationOfPoint(pole, start_point, next_ma)
+      next_loc = ek.getPoleRotationOfPoint(pole, start_point, next_ma, realWorld)
       layer_paths.append(
           [(start_loc.long, start_loc.lat), (next_loc.long, next_loc.lat), f"rot step {N}"])
       start_loc = next_loc
@@ -122,13 +122,12 @@ class PathLayer():
     return next_loc
 
   # plots path from start_point around compound translation and rotation Euler poles for specified time (ma)
-  def RenderComboPoleMotionForMa(self, start_point, vPole, rPole, ma, N=20):
+  def RenderComboPoleMotionForMa(self, start_point, vPole, rPole, ma, realWorld, N=20):
     layer_paths = []
     start_loc = start_point
     for i in range(0, N+1):
       next_ma = i * ma / N
-      next_loc = ek.getCompoundRotationTranslationOfPoint(
-          vPole, rPole, start_point, next_ma)
+      next_loc = ek.getCompoundRotationTranslationOfPoint(vPole, rPole, start_point, next_ma, realWorld)
       layer_paths.append(
           [(start_loc.long, start_loc.lat), (next_loc.long, next_loc.lat), f"rot step {N}"])
       start_loc = next_loc
@@ -137,13 +136,12 @@ class PathLayer():
     return next_loc
 
   # combo plot azimuth of cumilative rotation plot
-  def RenderAzimuthMarkersforMa(self, start_point, vPole, rPole, ma, N=5):
+  def RenderAzimuthMarkersforMa(self, start_point, vPole, rPole, ma, realWorld, N=5):
     layer_paths = []
     start_loc = start_point
     for i in range(0, N+1):
       next_ma = (i + 1) * ma / N
-      next_loc = ek.getCompoundRotationTranslationOfPoint(
-          vPole, rPole, start_point, next_ma)
+      next_loc = ek.getCompoundRotationTranslationOfPoint(vPole, rPole, start_point, next_ma, realWorld)
       rot_angle = -rPole.omega * i * ma / N
       mark_ploc = gh.getPointFromPavel(start_loc, gh.PAvel(
           rot_angle, .05), 1000)  # arbitrary length

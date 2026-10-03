@@ -118,6 +118,7 @@ class YhsPath:
 
   def get_yhs_loc(self, currentMa, deltaMa, steps):  # yrs is years
     self.checkLayersCreated()
+    realWorld = True # Uses WGS84 Geod
 
     # get a local rot pole we can move as needed
     runPnwRotPole = replace(self.PnwRotPole)
@@ -130,8 +131,7 @@ class YhsPath:
     # 1: Move yhs loc by NA speed scaled by ma from 0 Ma location (red line)
     # self.NAPole = ek.getEulerPoleFromPlocAndPavel(self.yhs_loc, self.NAPAvel)
     # loc_1 = self.NaPoleLayer.RenderPoleMotionForMa(self.yhs_loc, self.NAPole, -currentMa)
-    loc_1 = self.NaPoleLayer.RenderYHSPoleMotionForMa(
-        self.yhs_path_data, -currentMa)
+    loc_1 = self.NaPoleLayer.RenderYHSPoleMotionForMa(self.yhs_path_data, -currentMa)
     # loc_1.print("loc_1")
 
     # 'R-V' mode: move YHS loc by PnwVPole then rotate (most direct model) 
@@ -139,12 +139,12 @@ class YhsPath:
 
       # 2: Move by ma scaled pole translation v (blue line) - note pole is position dpendent
       loc_2 = self.PnwVPoleLayer.RenderPoleMotionForMa(
-          loc_1, pnwVPole, -currentMa)
+          loc_1, pnwVPole, -currentMa, realWorld)
       # loc_2.print("loc_2: ")
 
       # 3: Rotate by ma scaled pole omega
       loc_3 = self.PnwRotPoleLayer.RenderPoleMotionForMa(
-          loc_2, runPnwRotPole, currentMa)
+          loc_2, runPnwRotPole, currentMa, realWorld)
       self.parent.geoWhiteboard.draw_target(
           loc_3.long, loc_3.lat, f"{currentMa} Ma YHS ({loc_3.long:0.3f}, {loc_3.lat:0.3f})")
       # loc_3.print("loc_3: ")
@@ -153,19 +153,19 @@ class YhsPath:
     elif self.pole_model == 2: 
       # 2: Translate rot pole
       new_rot_pole_ploc = ek.getPoleRotationOfPoint(
-          pnwVPole, runPnwRotPole.ploc(), currentMa)
+          pnwVPole, runPnwRotPole.ploc(), currentMa, realWorld)
       t_RotPole = EulerPole(
           new_rot_pole_ploc.long, new_rot_pole_ploc.lat, runPnwRotPole.omega, is_clockwise=True)
       self.parent.geoWhiteboard.draw_target(t_RotPole.long, t_RotPole.lat,
                                             f"{currentMa} Ma pole ({t_RotPole.long:0.3f}, {t_RotPole.lat:0.3f})")
       # Rotate loc by pre-translated rot pole
       loc_2 = self.PnwRotPoleLayer.RenderPoleMotionForMa(
-          loc_1, t_RotPole, currentMa)  # WHY NOW POSITIVE Ma?
+          loc_1, t_RotPole, currentMa, realWorld) 
       # loc_2.print("loc_2: ")
 
       # 3: Translate back up
       loc_3 = self.PnwVPoleLayer.RenderPoleMotionForMa(
-          loc_2, pnwVPole, -currentMa)
+          loc_2, pnwVPole, -currentMa, realWorld)
       self.parent.geoWhiteboard.draw_target(
           loc_3.long, loc_3.lat, f"{currentMa} Ma YHS ({loc_3.long:0.3f}, {loc_3.lat:0.3f})")
       # loc_3.print("loc_3: ")
@@ -174,17 +174,17 @@ class YhsPath:
     elif self.pole_model == 3: 
       # self.parent.geoWhiteboard.draw_target(loc_1.long, loc_1.lat, f"{currentMa} Ma YHS ({loc_1.long:0.3f}, {loc_1.lat:0.3f})")
       loc_3 = self.PnwComboLayer.RenderComboPoleMotionForMa(
-          loc_1, pnwVPole, runPnwRotPole, currentMa)
+          loc_1, pnwVPole, runPnwRotPole, currentMa, realWorld)
       self.parent.geoWhiteboard.draw_target(
           loc_3.long, loc_3.lat, f"{currentMa} Ma YHS ({loc_3.long:0.3f}, {loc_3.lat:0.3f})")
       self.PnwRotPoleLayer.RenderAzimuthMarkersforMa(
-          loc_1, pnwVPole, runPnwRotPole, currentMa)
+          loc_1, pnwVPole, runPnwRotPole, currentMa, realWorld)
 
     # 'YHS Only' mode, model 4: plot only the final YHS spot
     else:  
       # self.parent.geoWhiteboard.draw_target(loc_1.long, loc_1.lat, f"{currentMa} Ma YHS ({loc_1.long:0.3f}, {loc_1.lat:0.3f})")
       loc_3 = ek.getCompoundRotationTranslationOfPoint(
-          pnwVPole, runPnwRotPole, loc_1, currentMa)
+          pnwVPole, runPnwRotPole, loc_1, currentMa, realWorld)
       self.parent.geoWhiteboard.draw_target(
           loc_3.long, loc_3.lat, f"{currentMa} Ma YHS ({loc_3.long:0.3f}, {loc_3.lat:0.3f})")
 

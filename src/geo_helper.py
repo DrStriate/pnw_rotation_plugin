@@ -95,7 +95,6 @@ class EulerPole:
   long: float
   lat: float
   omega: float
-
   is_clockwise: bool = False  # Set to True for clockwise poles needing antipodal shift
 
   def ploc(self):
@@ -164,22 +163,6 @@ def getPointFromPavel(start_point, pAVel, ma):
 
   return PLoc(destination_lon, destination_lat)
 
-# returns km
-
-
-def getNortherlyEasterlyFromLatLongPoints(lon1, lat1, lon2, lat2):
-  # forward_azimuth is the angle from point 1 to point 2 (degrees clockwise from North)
-  forward_azimuth, back_azimuth, distance_meters = geod.inv(
-      lon1, lat1, lon2, lat2)
-
-  # Convert azimuth to radians
-  azimuth_rad = np.radians(forward_azimuth)
-
-  # Calculate components
-  northerly_km = distance_meters * np.cos(azimuth_rad) * 0.001
-  easterly_km = distance_meters * np.sin(azimuth_rad) * 0.001
-  return northerly_km, easterly_km
-
 
 def getFwdAzimuthFromLocations(point1, point2):  # both PLocs
    # forward_azimuth is the angle from point 1 to point 2 (degrees clockwise from North)
@@ -188,8 +171,6 @@ def getFwdAzimuthFromLocations(point1, point2):  # both PLocs
   return forward_azimuth % 360
 
 # Great circle distance (km)
-
-
 def getDistanceBetweenPoints(point1, point2):  # both PLocs
   forward_azimuth, back_azimuth, distance_meters = geod.inv(
       point1.long, point1.lat, point2.long, point2.lat)

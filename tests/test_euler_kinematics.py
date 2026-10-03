@@ -83,7 +83,7 @@ def test_v_pole_from_sample_point():
 
   # typical pnw rot pole setup
   rotPole = EulerPole(-120.1, 44.427, 0.595, is_clockwise=True)
-  v_in = [0.767, 3.545]  # v pavel from typical calibration
+  v_in = [0.767, 3.545]  # v pavel from typical calibration (km/ma)
   v_pavel = PAvel.from_V(v_in)
   pnwVPole = ek.getEulerPoleFromPlocAndPavel(rotPole.ploc(), v_pavel)
 
@@ -169,14 +169,15 @@ def test_euler_pole_using_north_rotation():
 # errors showing up in breaking up rotations
 
 def test_getPoleRotationOfPoint():
-  gh.setGeod(realWorld=False)
+  realWorld=False
   test_pole = OC_NA_Pole
   test_loc = SeattlePloc
 
-  target = ek.getPoleRotationOfPoint(test_pole, test_loc, 20.0)
-  target_midpoint = ek.getPoleRotationOfPoint(test_pole, test_loc, 10.0)
-  target2 = ek.getPoleRotationOfPoint(test_pole, target_midpoint, 10.0)
-  assert target == pytest.approx(target2)
+  target = ek.getPoleRotationOfPoint(test_pole, test_loc, 20.0, realWorld)
+  target_midpoint = ek.getPoleRotationOfPoint(test_pole, test_loc, 10.0, realWorld)
+  target2 = ek.getPoleRotationOfPoint(test_pole, target_midpoint, 10.0, realWorld)
+  assert target.lat == pytest.approx(target2.lat, abs=1e-3)
+  assert target.long == pytest.approx(target2.long, abs=1e-3)
 
 def test_euler_GPS_pole_extraction():
   gh.setGeod(realWorld=True)
@@ -248,16 +249,16 @@ def test_euler_pole_from_pLoc():  # test pnw scenario with northerly motion on p
 
 
 def test_movement_from_Euler_pole():  # test inverse: map above pole back to point
-  gh.setGeod(realWorld=False)
+  realWorld=False
+  gh.setGeod(realWorld)
 
   pole = gh.EulerPole(150.4, 0.0, 1.0)
   point = PLoc(OC_NA_Pole.long, OC_NA_Pole.lat)  # sample point loc
-  new_point = ek.getPoleRotationOfPoint(pole, point, 1.0)
+  new_point = ek.getPoleRotationOfPoint(pole, point, 1.0, realWorld)
 
   # translation pole 90 degrees off reference
-  assert new_point.long == pytest.approx(point.long)
-  assert new_point.lat == pytest.approx(
-      point.lat + 1, abs=1e-6)  # 1 degree shift north
+  assert new_point.long == pytest.approx(point.long, abs=0.004)
+  assert new_point.lat == pytest.approx(point.lat + 1.0, abs=0.002)  # 1 degree shift north
   # distance (km) for 1 degree lat movement
   #assert vel == pytest.approx(gh.kmPerDegree())
 

@@ -3,7 +3,7 @@ import pytest
 import gauss_newton as gn
 import test_utils as tu
 from pathlib import Path
-from geo_helper import PLoc, PAvel, EulerPole, geod, R
+from geo_helper import PLoc, PAvel, EulerPole, R
 import geo_helper as gh
 import euler_kinematics as ek
 
