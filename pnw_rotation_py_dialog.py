@@ -23,6 +23,8 @@
 """
 
 import os
+import pandas as pd
+from pathlib import Path
 
 from qgis.PyQt import uic, QtWidgets
 from qgis.PyQt.QtWidgets import QDoubleSpinBox, QFileDialog, QMessageBox
@@ -40,6 +42,7 @@ from .jdf_plate import JFP
 from .rot_data import RotData
 from .geo_whiteboard import GeoWhiteboard
 from .src.geo_helper import PLoc, PAvel, EulerPole
+from .create_yhs_track_table import createYHSTrackTable
 
 # Brothers_Lat = 47.652
 # Brothers_Long = -123.141
@@ -104,6 +107,7 @@ class PnwRotPyDialog(QtWidgets.QDialog, FORM_CLASS):
     self.stereographicEnabled = True
     self.yhsPath.getPnwGpsRotPoleAndVelocity()
     self.setDialogueProperties()
+    self.filePath = ""
 
   def setDialogueProperties(self):  # Set UI from yhs_Path
     self.uiPropertieesSet = False  # ignore changed events until done
@@ -176,10 +180,14 @@ class PnwRotPyDialog(QtWidgets.QDialog, FORM_CLASS):
         self.yhsPath.deserialize_and_set_bag(json_data)
         print(f"Successfully loaded from {file_path}")
         self.setDialogueProperties()
+        self.filePath = Path(file_path).name
+        return
 
       except Exception as e:
         QMessageBox.critical(
             self, "Load Error", f"Could not load file:\n{str(e)}")
+      self.filePath = file_path
+    self.filePath = ""
 
   def clearData(self):
     self.clearRotDataLayer()
@@ -282,9 +290,32 @@ class PnwRotPyDialog(QtWidgets.QDialog, FORM_CLASS):
       self.yhsPath.display_NA_pole_info()
       self.rotPoleDisplayed = True
 
+    # Code to serialize runs for paleo evaluation in ArcGIS
+    csvFileName = "YHS_path.csv"
+    csvPath = os.path.join(os.path.dirname(__file__), csvFileName)
     for i in range(steps):
       currentMa += deltaMa
-      self.yhsPath.get_yhs_loc(currentMa, deltaMa, steps)
+      loc = self.yhsPath.get_yhs_loc(currentMa, deltaMa, steps)
+
+      rotRate = self.yhsPath.PnwRotPole.omega
+      rotAngle = currentMa * rotRate
+      path_entry = {
+            'File_name': self.filePath,
+            'lat': round(loc.lat, 3),
+            'long': round(loc.long, 3),
+            'Age': round(currentMa, 2),
+            'Age_ma': int(-currentMa),
+            'Net_Rot_Angle': round(rotAngle, 3),
+            'Rot_Rate': round(rotRate, 3)
+        }
+      # Convert the single dictionary into a 1-row DataFrame
+      df_row = pd.DataFrame([path_entry])
+
+      # Check if the file already exists so we only write headers once
+      file_exists = os.path.isfile(csvPath)
+
+      # Append the single row to the CSV
+      df_row.to_csv(csvPath, mode="a", header=not file_exists, index=False)
     return
 
   def stereographicToggled(self):

@@ -105,7 +105,7 @@ class PathLayer():
       # print(f"next_ma {next_ma}")
     return next_loc
 
-  def RenderYHSPoleMotionForMa(self, yhs_path_data, ma):
+  def RenderYHSPoleMotionForMa(self, yhs_path_data, plot_on, ma):
     layer_paths = []
     # lat, long = ry.get_interpolated_yhs_position(yhs_path_data, 0.0)
     t1, lat, long = yhs_path_data[0]
@@ -117,7 +117,8 @@ class PathLayer():
       layer_paths.append(
           [(start_loc.long, start_loc.lat), (next_loc.long, next_loc.lat), f"rot step {ma}"])
       start_loc = next_loc
-      self.add_run_paths_to_path_layer(layer_paths)
+      if plot_on:
+        self.add_run_paths_to_path_layer(layer_paths)
       # print(f"next_ma {next_ma}")
     return next_loc
 

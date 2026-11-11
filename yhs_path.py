@@ -129,9 +129,7 @@ class YhsPath:
     # pnwVPole.print("PnwVPole: ")
 
     # 1: Move yhs loc by NA speed scaled by ma from 0 Ma location (red line)
-    # self.NAPole = ek.getEulerPoleFromPlocAndPavel(self.yhs_loc, self.NAPAvel)
-    # loc_1 = self.NaPoleLayer.RenderPoleMotionForMa(self.yhs_loc, self.NAPole, -currentMa)
-    loc_1 = self.NaPoleLayer.RenderYHSPoleMotionForMa(self.yhs_path_data, -currentMa)
+    loc_1 = self.NaPoleLayer.RenderYHSPoleMotionForMa(self.yhs_path_data, self.pole_model != 4, -currentMa)
     # loc_1.print("loc_1")
 
     # 'R-V' mode: move YHS loc by PnwVPole then rotate (most direct model) 
