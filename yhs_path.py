@@ -119,6 +119,7 @@ class YhsPath:
   def get_yhs_loc(self, currentMa, deltaMa, steps):  # yrs is years
     self.checkLayersCreated()
     realWorld = True # Uses WGS84 Geod
+    self.PnwRotPole.apply_scaling = self.parent.rbApplyMaScaling.isChecked()
 
     # get a local rot pole we can move as needed
     runPnwRotPole = replace(self.PnwRotPole)

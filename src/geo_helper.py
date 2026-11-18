@@ -96,12 +96,26 @@ class EulerPole:
   lat: float
   omega: float
   is_clockwise: bool = False  # Set to True for clockwise poles needing antipodal shift
+  apply_scaling: bool = True
+  a_coeff: float = -0.000933059  # quadratic model coeff. 
+  b_coeff: float = 0.056432751
 
   def ploc(self):
     return PLoc(self.long, self.lat)
 
   def print(self, label: str = ""):
     print(f"{label} long: {self.long:0.3f}, lat: {self.lat:0.3f}, omega: {self.omega:.6f}")
+
+  # Get total rotation at t=ma
+  # w(t) = 3*a*t^2 + 2*b*t = 0 : 3*a*t = -2*b, , t = (-2*b)/(3*a)
+  # R(t) = a*t^3 + b*t^2 + w_0*t 
+  def Rot(self, ma): 
+    if self.is_clockwise and self.apply_scaling:
+      max_t = (-2.0* self.b_coeff) / (3.0 * self.a_coeff) # test if at min rotation t and clamp at zero
+      t = min(max_t, ma)
+      return max(self.a_coeff * ma ** 3 + self.b_coeff * ma ** 2 + self.omega * ma, 0)
+    else:
+      return self.omega * ma
 
   def normalize(self) -> 'EulerPole':
     """

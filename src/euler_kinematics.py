@@ -77,8 +77,8 @@ def getPoleRotationOfPoint(pole, pLoc, ma, realWorld):
     az_pole_to_pt, _, dist_meters = geod.inv(pole.long, pole.lat, pLoc.long, pLoc.lat)
     
     # 2. Calculate the angular rotation around the pole (in degrees)
-    delta_theta = pole.omega * ma
-    
+    delta_theta = pole.Rot(ma)
+
     # Update the azimuth around the Euler pole
     new_azimuth = (az_pole_to_pt + delta_theta) % 360.0
     
@@ -93,7 +93,7 @@ def getCompoundRotationTranslationOfPoint(vPole, rPole, ploc, ma, realWorld):
   # move the rot pole to the proper loc for ma
   rot_pole_ma_ploc = getPoleRotationOfPoint(vPole, rPole.ploc(), ma, realWorld)
   ma_rot_pole = gh.EulerPole(
-      rot_pole_ma_ploc.long, rot_pole_ma_ploc.lat, rPole.omega, is_clockwise=True)
+      rot_pole_ma_ploc.long, rot_pole_ma_ploc.lat, rPole.omega, is_clockwise=True, apply_scaling=rPole.apply_scaling)
 
   # Rotate by ma scaled rot pole omega
   loc_2 = getPoleRotationOfPoint(ma_rot_pole, ploc, ma, realWorld)
