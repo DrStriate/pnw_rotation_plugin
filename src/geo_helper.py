@@ -94,11 +94,12 @@ class PAvel:
 class EulerPole:
   long: float
   lat: float
-  omega: float
+  omega: float # if apply_scaling, then omega only true at t=0
   is_clockwise: bool = False  # Set to True for clockwise poles needing antipodal shift
-  apply_scaling: bool = True
+  apply_scaling: bool = False
   a_coeff: float = -0.000933059  # quadratic model coeff. 
   b_coeff: float = 0.056432751
+  MAX_TOTAL_ROT_MA = 40 # These a,b quadratic values max out total rot at 40 Ma so need to clamp there
 
   def ploc(self):
     return PLoc(self.long, self.lat)
@@ -106,16 +107,25 @@ class EulerPole:
   def print(self, label: str = ""):
     print(f"{label} long: {self.long:0.3f}, lat: {self.lat:0.3f}, omega: {self.omega:.6f}")
 
-  # Get total rotation at t=ma
-  # w(t) = 3*a*t^2 + 2*b*t = 0 : 3*a*t = -2*b, , t = (-2*b)/(3*a)
+  # Get total rotation at t=ma 
   # R(t) = a*t^3 + b*t^2 + w_0*t 
-  def Rot(self, ma): 
+  def TotalRot(self, ma): # IMPORTANT: Ma isn't just an arbitrary interval, It's a specific point Ma yeard ago from now. 
     if self.is_clockwise and self.apply_scaling:
-      max_t = (-2.0* self.b_coeff) / (3.0 * self.a_coeff) # test if at min rotation t and clamp at zero
-      t = min(max_t, ma)
-      return max(self.a_coeff * ma ** 3 + self.b_coeff * ma ** 2 + self.omega * ma, 0)
+      t = min(self.MAX_TOTAL_ROT_MA, abs(ma))
+      total_rot = self.a_coeff * t ** 3 + self.b_coeff * t ** 2 + self.omega * t
+      return total_rot
     else:
       return self.omega * ma
+    
+  # w(t) = 3*a*t^2 + 2*b*t + w_0
+  def Rate(self, ma): # See above regarding ma is the current date not an interval on the timeline
+      t = abs(ma)
+      if self.is_clockwise and self.apply_scaling:
+        rate = 3.0 * self.a_coeff * t ** 2 + 2.0 * self.b_coeff *t + self.omega
+        return max(rate, 0.0)
+      else:
+        return self.omega
+   
 
   def normalize(self) -> 'EulerPole':
     """

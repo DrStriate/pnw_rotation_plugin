@@ -6,7 +6,7 @@ import test_utils as tu
 
 def fit_euler_pole_linear(pvData):
   """
-  Finds the exact best-fitting Euler pole using linear least squares.
+  Finds the best-fitting Euler pole using linear least squares.
 
   Args:
     pvData.lat (list/array): Latitudes of stations in decimal degrees

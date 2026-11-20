@@ -32,7 +32,7 @@ def getPlocFromLocNormal(p_hat):
   lam = np.arctan2(p_hat[1], p_hat[0])
   return PLoc(np.degrees(lam), np.degrees(phi))
 
-# Rotates point ploc around Euler pole by omega * ma to a new ploc2 
+# Rotates point ploc around Euler pole by omega * ma to a new ploc2. NOT for real world computations 
 def getPoleRotationOfPointSphere(pole, ploc, ma):
 
   # Apply Rodrigues' rotation formula
@@ -48,21 +48,20 @@ def getPoleRotationOfPointSphere(pole, ploc, ma):
   return getPlocFromVector(V_new)
 
 
+# Don't use this for incremental ma. Use pLoc and ma from t=0 for adjustable rates
 def getPoleRotationOfPoint(pole, pLoc, ma, realWorld):
     """
     Rotates a point around an Euler pole on an ellipsoidal Earth (e.g. WGS84).
     
     Parameters:
-      pole: Object with attributes 'lat', 'lon' (or ploc() returning [lat, lon]), and 'omega' (deg/Ma).
-      ploc: Tuple or list of [latitude, longitude] in degrees.
-      ma: Time duration in Million Years (or time step units matching omega).
+      pole: Object with attributes 'lat', 'lon' (or ploc() returning [lat, lon]), and 'omega' (deg/Ma @ ma = 0).
+      ploc: Point (lat, long) to rotate.
+      ma: Time duration in Million Years.
       geod: pyproj.Geod instance (defaults to WGS84).
       
     Returns:
       ploc2: [latitude, longitude] of the rotated point in degrees.
     """
-
-    print(f"realWorld: {realWorld}")
 
     if not realWorld:
       return getPoleRotationOfPointSphere(pole, pLoc, ma)
@@ -77,10 +76,10 @@ def getPoleRotationOfPoint(pole, pLoc, ma, realWorld):
     az_pole_to_pt, _, dist_meters = geod.inv(pole.long, pole.lat, pLoc.long, pLoc.lat)
     
     # 2. Calculate the angular rotation around the pole (in degrees)
-    delta_theta = pole.Rot(ma)
+    net_rot = pole.TotalRot(ma)
 
     # Update the azimuth around the Euler pole
-    new_azimuth = (az_pole_to_pt + delta_theta) % 360.0
+    new_azimuth = (az_pole_to_pt + net_rot) % 360.
     
     # 3. Forward geodesic calculation: find new point location at same distance
     # fwd returns: (new_lon, new_lat, back_azimuth)
@@ -134,7 +133,7 @@ def getEulerPoleFromPlocAndPavel(ploc, pAvel):
   
   pe_hat = gh.normalize(np.cross(P, V))  # epipolar unit direction vector
   epiPoleLoc = getPlocFromLocNormal(pe_hat)
-  return EulerPole(epiPoleLoc.long, epiPoleLoc.lat, omega)
+  return EulerPole(epiPoleLoc.long, epiPoleLoc.lat, omega, is_clockwise=False, apply_scaling=False)
 
 def getVForPlocFromPole(pole, pLoc, omega=None):
   P = R * getVectFromPloc(pLoc)

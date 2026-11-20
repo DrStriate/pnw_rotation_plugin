@@ -154,7 +154,7 @@ class YhsPath:
       new_rot_pole_ploc = ek.getPoleRotationOfPoint(
           pnwVPole, runPnwRotPole.ploc(), currentMa, realWorld)
       t_RotPole = EulerPole(
-          new_rot_pole_ploc.long, new_rot_pole_ploc.lat, runPnwRotPole.omega, is_clockwise=True)
+          new_rot_pole_ploc.long, new_rot_pole_ploc.lat, runPnwRotPole.omega, runPnwRotPole.is_clockwise, runPnwRotPole.apply_scaling)
       self.parent.geoWhiteboard.draw_target(t_RotPole.long, t_RotPole.lat,
                                             f"{currentMa} Ma pole ({t_RotPole.long:0.3f}, {t_RotPole.lat:0.3f})")
       # Rotate loc by pre-translated rot pole

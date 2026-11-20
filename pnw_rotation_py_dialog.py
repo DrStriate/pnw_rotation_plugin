@@ -285,6 +285,7 @@ class PnwRotPyDialog(QtWidgets.QDialog, FORM_CLASS):
     currentMa = startMa
     deltaMa = self.spbStepMa.value()
     steps = self.sbSteps.value()
+    rot_pole = self.yhsPath.PnwRotPole
 
     if not self.rotPoleDisplayed:
       self.yhsPath.display_NA_pole_info()
@@ -293,20 +294,21 @@ class PnwRotPyDialog(QtWidgets.QDialog, FORM_CLASS):
     # Code to serialize runs for paleo evaluation in ArcGIS
     csvFileName = "YHS_path.csv"
     csvPath = os.path.join(os.path.dirname(__file__), csvFileName)
+    if os.path.exists(csvPath):
+      os.remove(csvPath)
+
     for i in range(steps):
       currentMa += deltaMa
       loc = self.yhsPath.get_yhs_loc(currentMa, deltaMa, steps)
 
-      rotRate = self.yhsPath.PnwRotPole.omega
-      rotAngle = currentMa * rotRate
       path_entry = {
             'File_name': self.filePath,
             'lat': round(loc.lat, 3),
             'long': round(loc.long, 3),
             'Age': round(currentMa, 2),
             'Age_ma': int(-currentMa),
-            'Net_Rot_Angle': round(rotAngle, 3),
-            'Rot_Rate': round(rotRate, 3)
+            'Net_Rot_Angle': round(rot_pole.TotalRot(currentMa), 3),
+            'Rot_Rate': round(rot_pole.Rate(currentMa), 3)
         }
       # Convert the single dictionary into a 1-row DataFrame
       df_row = pd.DataFrame([path_entry])

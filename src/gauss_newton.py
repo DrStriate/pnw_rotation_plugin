@@ -22,7 +22,7 @@ def solve_gauss_newton_translation(pvData, euler_pole):
   # 3D ECEF parameter tracking vector [Tx, Ty, Tz]
   T = np.zeros(3)
 
-  # Convert deg/Ma directly to rad/Ma
+  # Convert deg/Ma directly to rad/Ma (Note omega is at t=0)
   omega_rad_ma = np.radians(euler_pole.omega)
   pole_phi = np.radians(euler_pole.lat)
   pole_lam = np.radians(euler_pole.long)
